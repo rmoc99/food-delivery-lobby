@@ -9,16 +9,14 @@ function App() {
     imageAlt: Image1,
     atribute1: 'Peça já',
     badge: 'Novo',
-    atribute2: 'Best Burger in Town',
     title: 'Good Burger',
     link: 'https://ps-burger.herokuapp.com/',
 }
 const store2 = {
     imageUrl: Image2,
     imageAlt: Image2,
-    badge: 'Esplanada',
+    badge: 'Novas Promoções',
     atribute1: 'Biggest Pizza',
-    atribute2: 'Novas Promoções',
     title: 'Fast Pizza',
     link: 'https://fast-pizza-client.herokuapp.com/',
 
