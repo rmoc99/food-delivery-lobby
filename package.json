@@ -1,0 +1,19 @@
+{
+  "name": "food-delivery-lobby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmoc99/food-delivery-lobby.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmoc99/food-delivery-lobby/issues"
+  },
+  "homepage": "https://github.com/rmoc99/food-delivery-lobby#readme"
+}
