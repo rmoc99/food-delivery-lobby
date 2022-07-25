@@ -18,10 +18,9 @@ const store2 = {
     title: 'Fast Pizza',
     link: 'https://fast-pizza-client.herokuapp.com/',
 }
+const stores = [store1, store2]
 function App() {
 
-
-const stores = [store1, store2]
   return (
     <ChakraProvider>
     <div className="App">
@@ -42,7 +41,6 @@ const stores = [store1, store2]
                         <Link href={store.link} isExternal>
                         
                             <Box cursor='pointer' maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px'>
-                                <Image src={store.imageUrl} alt={store.alt} />
                                 <Box p='6'>
                                     <Box display='flex' alignItems='baseline'>
                                         <Badge borderRadius='full' px='2' colorScheme='teal'>
