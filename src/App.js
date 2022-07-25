@@ -1,3 +1,4 @@
+import * as React from 'react'
 import './App.css';
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
@@ -38,9 +39,9 @@ function App() {
                 {stores.map((store) => {
                     return (
                         <>  
-                        <Link href={store.link} isExternal>
-                        
+                        <Link href={store.link}>
                             <Box cursor='pointer' maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px'>
+                                <Image src={store.imageUrl} alt={store.alt} />
                                 <Box p='6'>
                                     <Box display='flex' alignItems='baseline'>
                                         <Badge borderRadius='full' px='2' colorScheme='teal'>
