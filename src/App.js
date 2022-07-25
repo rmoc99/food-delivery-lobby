@@ -1,7 +1,7 @@
 import './App.css';
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
-import {ChakraProvider, Box, Image, Badge, Heading, Text } from '@chakra-ui/react'
+import {ChakraProvider, Box, Image, Badge, Heading, Text,Link } from '@chakra-ui/react'
 function App() {
 
   const store1 = {
@@ -41,8 +41,10 @@ const stores = [store1, store2]
             <Box display='flex'>
                 {stores.map((store) => {
                     return (
-                        <>
-                            <Box cursor='pointer' maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px' href={store.link}>
+                        <>  
+                        <Link href={store.link} isExternal>
+                        
+                            <Box cursor='pointer' maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px'>
                                 <Image src={store.imageUrl} alt={store.alt} />
                                 <Box p='6'>
                                     <Box display='flex' alignItems='baseline'>
@@ -50,7 +52,7 @@ const stores = [store1, store2]
                                             {store.badge}
                                         </Badge>
                                         <Box marginLeft='5px' color='gray.500' fontWeight='semibold' letterSpacing='wide' fontSize='xs' textTransform='uppercase'>
-                                            {store.atribute1} &bull; {store.atribute2}
+                                            {store.atribute1}
                                         </Box>
                                     </Box>
                                     <Box mt='1' fontWeight='semibold' as='h4' lineHeight='tight' noOfLines={1}>
@@ -58,6 +60,7 @@ const stores = [store1, store2]
                                     </Box>
                                 </Box>
                             </Box>
+                            </Link>
                         </>
                     )
                 }
