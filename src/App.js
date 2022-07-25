@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
@@ -8,20 +7,21 @@ function App() {
   const store1 = {
     imageUrl: Image1,
     imageAlt: Image1,
-    atribute1: 'reserva',
+    atribute1: 'Peça já',
     badge: 'Novo',
-    atribute2: 'Horário 12H as 15H',
-    title: 'Parque das nações',
-    morada: 'Alameda dos Oceanos 98 A, 1990-228 Lisboa',
+    atribute2: 'Best Burger in Town',
+    title: 'Good Burger',
+    link: 'https://ps-burger.herokuapp.com/',
 }
 const store2 = {
     imageUrl: Image2,
     imageAlt: Image2,
     badge: 'Esplanada',
-    atribute1: 'Reserva',
-    atribute2: 'Horário 12H as 00H',
-    title: 'Belém',
-    morada: 'Rua de Belém, 116/118, 1300-086 Lisboa',
+    atribute1: 'Biggest Pizza',
+    atribute2: 'Novas Promoções',
+    title: 'Fast Pizza',
+    link: 'https://fast-pizza-client.herokuapp.com/',
+
 }
 
 const stores = [store1, store2]
@@ -42,7 +42,7 @@ const stores = [store1, store2]
                 {stores.map((store) => {
                     return (
                         <>
-                            <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px'>
+                            <Box cursor='pointer' maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px' href={store.link}>
                                 <Image src={store.imageUrl} alt={store.alt} />
                                 <Box p='6'>
                                     <Box display='flex' alignItems='baseline'>
@@ -56,11 +56,6 @@ const stores = [store1, store2]
                                     <Box mt='1' fontWeight='semibold' as='h4' lineHeight='tight' noOfLines={1}>
                                         {store.title}
                                     </Box>
-
-                                    <Box>
-                                        {store.morada}
-                                    </Box>
-
                                 </Box>
                             </Box>
                         </>
