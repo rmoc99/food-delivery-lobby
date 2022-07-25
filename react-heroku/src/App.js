@@ -1,9 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { ChakraProvider } from '@chakra-ui/react'
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
-
+import {ChakraProvider, Box, Image, Badge, Heading, Text } from '@chakra-ui/react'
 function App() {
 
   const store1 = {
@@ -34,41 +33,41 @@ const stores = [store1, store2]
                 fontWeight={600}
                 fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
                 marginBottom={50}>
-                Os Nossos Restaurantes <br />
+                Food-Delivery <br />
                 <Text fontSize={{ base: '2xl', sm: '4xl', md: '2xl' }} as={'span'} color={'blue.400'}>
-                    Fazemos reservas
+                    Escolha a loja
                 </Text>
             </Heading>
-            <div className="locals_container">
-                {places.map((place) => {
+            <Box display='flex'>
+                {stores.map((store) => {
                     return (
-                        <div className="child_place">
+                        <>
                             <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginRight='50px'>
-                                <Image src={place.imageUrl} alt={place.alt} />
+                                <Image src={store.imageUrl} alt={store.alt} />
                                 <Box p='6'>
                                     <Box display='flex' alignItems='baseline'>
                                         <Badge borderRadius='full' px='2' colorScheme='teal'>
-                                            {place.badge}
+                                            {store.badge}
                                         </Badge>
                                         <Box marginLeft='5px' color='gray.500' fontWeight='semibold' letterSpacing='wide' fontSize='xs' textTransform='uppercase'>
-                                            {place.atribute1} &bull; {place.atribute2}
+                                            {store.atribute1} &bull; {store.atribute2}
                                         </Box>
                                     </Box>
                                     <Box mt='1' fontWeight='semibold' as='h4' lineHeight='tight' noOfLines={1}>
-                                        {place.title}
+                                        {store.title}
                                     </Box>
 
                                     <Box>
-                                        {place.morada}
+                                        {store.morada}
                                     </Box>
 
                                 </Box>
                             </Box>
-                        </div>
+                        </>
                     )
                 }
                 )}
-            </div>
+            </Box>
         </div>
     </ChakraProvider>
   );
