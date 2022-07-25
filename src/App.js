@@ -2,27 +2,24 @@ import './App.css';
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
 import {ChakraProvider, Box, Image, Badge, Heading, Text,Link } from '@chakra-ui/react'
-function App() {
-
-  const store1 = {
+const store1 = {
     imageUrl: Image1,
     imageAlt: Image1,
     atribute1: 'Peça já',
     badge: 'Novo',
-    atribute2: 'Best Burger in Town',
     title: 'Good Burger',
     link: 'https://ps-burger.herokuapp.com/',
 }
 const store2 = {
     imageUrl: Image2,
     imageAlt: Image2,
-    badge: 'Esplanada',
     atribute1: 'Biggest Pizza',
-    atribute2: 'Novas Promoções',
+    badge: 'Pomoções',
     title: 'Fast Pizza',
     link: 'https://fast-pizza-client.herokuapp.com/',
-
 }
+function App() {
+
 
 const stores = [store1, store2]
   return (
