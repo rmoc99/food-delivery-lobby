@@ -1,5 +1,4 @@
 import * as React from 'react'
-import './App.css';
 import Image1 from './main.jpg'
 import Image2 from './pizzaWallpaper.jpg'
 import {ChakraProvider, Box, Image, Heading, Text,Link } from '@chakra-ui/react'
@@ -7,7 +6,7 @@ import {ChakraProvider, Box, Image, Heading, Text,Link } from '@chakra-ui/react'
 function App() {
 
   return (
-    <ChakraProvider>
+    
     <div className="App">
             <Heading
                 textAlign={'center'}
@@ -43,7 +42,6 @@ function App() {
                             </Link>
             </Box>
         </div>
-    </ChakraProvider>
   );
 }
 
